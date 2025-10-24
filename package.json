@@ -1,0 +1,50 @@
+{
+  "name": "testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode production",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "tsc --noEmit --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unsaved1/only-testing-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/unsaved1/only-testing-app/issues"
+  },
+  "homepage": "https://github.com/unsaved1/only-testing-app#readme",
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "swiper": "^12.0.2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "css-loader": "^6.8.1",
+    "esbuild": "^0.19.2",
+    "esbuild-loader": "^3.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.9.4",
+    "sass": "^1.93.2",
+    "sass-loader": "^16.0.5",
+    "style-loader": "^3.3.3",
+    "typescript": "^5.1.6",
+    "typescript-plugin-css-modules": "^5.2.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  }
+}

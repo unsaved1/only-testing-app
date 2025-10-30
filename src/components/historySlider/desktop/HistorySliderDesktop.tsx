@@ -76,10 +76,9 @@ export const HistorySliderDesktop = ({
       if (destIndex > items.length - 1) {
         return;
       }
-      if (destIndex < 0) {
+      if (destIndex < 0 || destIndex === currentItem.index) {
         return;
       }
-      console.log(destIndex);
       setCurrentItem({ ...items[destIndex], index: destIndex });
       setPrevItem(items[currentItem.index]);
       setIsShowSlider(false);
@@ -139,7 +138,8 @@ export const HistorySliderDesktop = ({
         </div>
         <div className={styles.navigation}>
           <span className={styles.navigation__indicator}>
-            {currentItem.index + 1}/{items.length}
+            {(currentItem.index + 1).toString().padStart(2, "0")}/
+            {items.length.toString().padStart(2, "0")}
           </span>
           <div className={styles.navigation__btns}>
             <button

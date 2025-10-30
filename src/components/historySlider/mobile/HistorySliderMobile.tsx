@@ -41,7 +41,7 @@ export const HistorySliderMobile = ({
       if (destIndex > items.length - 1) {
         return;
       }
-      if (destIndex < 0) {
+      if (destIndex < 0 || destIndex === currentItem.index) {
         return;
       }
       setCurrentItem({ ...items[destIndex], index: destIndex });
@@ -93,7 +93,7 @@ export const HistorySliderMobile = ({
       </div>
       <Container className={styles.navigation}>
         <span className={styles.navigation__indicator}>
-          {currentItem.index + 1}/{items.length}
+          {(currentItem.index + 1).toString().padStart(2, '0')}/{items.length.toString().padStart(2, '0')}
         </span>
         <div className={styles.navigation__wrapper}>
           <div className={styles.navigation__btns}>
